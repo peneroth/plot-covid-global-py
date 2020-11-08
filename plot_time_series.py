@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
-csv_file = 'time_series_covid19_deaths_global_1107.csv'
+csv_file = 'time_series_covid19_deaths_global_1108.csv'
 
 # Determine data set size!
 cvs_row_count = 0
@@ -60,6 +60,7 @@ c4 = 'US'
 c5 = 'France'
 c6 = 'Brazil'
 c7 = 'United Kingdom'
+c8 = 'Denmark'
 
 index1 = country.index(c1)
 index2 = country.index(c2)
@@ -68,6 +69,7 @@ index4 = country.index(c4)
 index5 = country.index(c5)+10 # skip xxx
 index6 = country.index(c6)
 index7 = country.index(c7)+10 # skip Bermuda, Cayman Islands, Channel Islands, Gibraltar, Isle of Man, Montserrat + more
+index8 = country.index(c8)+2 # skip xxx
 
 y1 = dead_mean[index1,:]/10 * 10 # per 100000
 y2 = dead_mean[index2,:]/60 * 10 # per 100000
@@ -76,6 +78,7 @@ y4 = dead_mean[index4,:]/328 * 10 # per 100000
 y5 = dead_mean[index5,:]/67 * 10 # per 100000
 y6 = dead_mean[index6,:]/210 * 10 # per 100000
 y7 = dead_mean[index7,:]/67 * 10 # per 100000
+y8 = dead_mean[index8,:]/5.8 * 10 # per 100000
 
 x = np.linspace(1,len(y1),len(y1))
 plt.plot(x,y1,label=c1)
@@ -85,6 +88,7 @@ plt.plot(x,y4,label=c4)
 plt.plot(x,y5,label=c5)
 plt.plot(x,y6,label=c6)
 plt.plot(x,y7,label=c7)
+plt.plot(x,y8,label=c8)
 plt.xlabel('days')
 plt.ylabel('deaths per 100000 per day')
 plt.title("Title")
