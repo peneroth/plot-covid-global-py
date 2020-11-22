@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
-csv_file = 'time_series_covid19_deaths_global_1109.csv'
+csv_file = 'time_series_covid19_deaths_global_1122.csv'
 
 # Determine data set size!
 cvs_row_count = 0
@@ -91,7 +91,7 @@ plt.plot(x,y7,label=c7)
 plt.plot(x,y8,label=c8)
 plt.xlabel('days')
 plt.ylabel('deaths per 100000 per day')
-plt.title("Title")
+plt.title("Data set = " + csv_file)
 plt.legend()
 plt.show()
 
