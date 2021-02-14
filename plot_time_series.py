@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
-csv_file = 'time_series_covid19_deaths_global_1218.csv'
+csv_file = 'time_series_covid19_deaths_global_0214.csv'
 
 # Determine data set size!
 cvs_row_count = 0
