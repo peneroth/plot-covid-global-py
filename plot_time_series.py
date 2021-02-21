@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
-csv_file = 'time_series_covid19_deaths_global_0214.csv'
+csv_file = 'time_series_covid19_deaths_global_0221.csv'
 
 # Determine data set size!
 cvs_row_count = 0
@@ -67,7 +67,7 @@ index1 = country.index(c1)
 index2 = country.index(c2)
 index3 = country.index(c3)
 index4 = country.index(c4)
-index5 = country.index(c5)+10 # skip xxx
+index5 = country.index(c5)+11 # skip xxx
 index6 = country.index(c6)
 index7 = country.index(c7)+10 # skip Bermuda, Cayman Islands, Channel Islands, Gibraltar, Isle of Man, Montserrat + more
 index8 = country.index(c8)+2 # skip xxx
