@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
-csv_file = 'time_series_covid19_deaths_global_0221.csv'
+csv_file = 'time_series_covid19_deaths_global_0321.csv'
 
 # Determine data set size!
 cvs_row_count = 0
@@ -62,6 +62,7 @@ c6 = 'Brazil'
 c7 = 'United Kingdom'
 c8 = 'Denmark'
 c9 = 'Germany'
+c10 = 'Israel'
 
 index1 = country.index(c1)
 index2 = country.index(c2)
@@ -69,9 +70,10 @@ index3 = country.index(c3)
 index4 = country.index(c4)
 index5 = country.index(c5)+11 # skip xxx
 index6 = country.index(c6)
-index7 = country.index(c7)+10 # skip Bermuda, Cayman Islands, Channel Islands, Gibraltar, Isle of Man, Montserrat + more
+index7 = country.index(c7)+11 # skip Bermuda, Cayman Islands, Channel Islands, Gibraltar, Isle of Man, Montserrat + more
 index8 = country.index(c8)+2 # skip xxx
 index9 = country.index(c9)
+index10 = country.index(c10)
 
 y1 = dead_mean[index1,:]/10 * 10 # per 100000
 y2 = dead_mean[index2,:]/60 * 10 # per 100000
@@ -82,6 +84,7 @@ y6 = dead_mean[index6,:]/210 * 10 # per 100000
 y7 = dead_mean[index7,:]/67 * 10 # per 100000
 y8 = dead_mean[index8,:]/5.8 * 10 # per 100000
 y9 = dead_mean[index9,:]/83 * 10 # per 100000
+y10 = dead_mean[index10,:]/9 * 10 # per 100000
 
 x = np.linspace(1,len(y1),len(y1))
 plt.plot(x,y1,label=c1)
@@ -93,6 +96,7 @@ plt.plot(x,y6,label=c6)
 plt.plot(x,y7,label=c7)
 plt.plot(x,y8,label=c8)
 plt.plot(x,y9,label=c9)
+plt.plot(x,y10,label=c10)
 plt.xlabel('days')
 plt.ylabel('deaths per 100000 per day')
 plt.title("Data set = " + csv_file)
